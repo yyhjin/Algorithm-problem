@@ -61,9 +61,6 @@ public class Main_7576_토마토 {
 	static int[] dc = { 1, 0, -1, 0 };
 
 	private static void bfs() {
-		
-		
-
 		while (!q.isEmpty()) {
 			int cur[] = q.poll();
 			int cr = cur[0];
