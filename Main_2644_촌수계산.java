@@ -30,16 +30,8 @@ public class Main_2644_촌수계산 {
 			map[n1][n2] = 1;
 			map[n2][n1] = 1;
 		}
-		
-		for (int i = 1; i < N+1; i++) {
-			for (int j = 1; j < N+1; j++) {
-				System.out.print(map[i][j]+" ");
-			}
-			System.out.println();
-		}
-		
-		dfs(p1, 0);
-		
+
+		dfs(p1, 0);	
 		System.out.println(count);
 	}
 
@@ -48,7 +40,6 @@ public class Main_2644_촌수계산 {
 			count = cnt;
 			return;
 		}
-		
 		for (int i = 1; i < N+1; i++) {
 			if(map[n][i]==1 && !v[i]) {
 				v[i] = true;
