@@ -48,4 +48,4 @@ public class Main_2644_촌수계산 {
 		}
 	}
 
-}
+} 
