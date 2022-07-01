@@ -4,6 +4,8 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// Gold4
+
 public class Main_2665_미로만들기 {
 
 	static int N;
