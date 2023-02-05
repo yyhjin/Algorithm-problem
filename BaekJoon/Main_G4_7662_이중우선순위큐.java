@@ -4,15 +4,13 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
-public class Main_G5_7662_이중우선순위큐 {
+public class Main_G4_7662_이중우선순위큐 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		StringBuilder sb = new StringBuilder();
 		
-//		PriorityQueue<Integer> min = new PriorityQueue<>();
-//		PriorityQueue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());
 		TreeMap<Integer, Integer> tree = new TreeMap<>();
 		
 		int T = Integer.parseInt(br.readLine());
