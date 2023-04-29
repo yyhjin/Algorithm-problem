@@ -18,17 +18,14 @@ public class Main_G3_2812_크게만들기 {
 		int count = 0;
 		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < N; i++) {
-			if(stack.isEmpty()) stack.push(num.charAt(i));
-			else {
-				while(!stack.isEmpty() && count < K) {
-					if(stack.peek() < num.charAt(i)) {
-						stack.pop();
-						count++;
-					}
-					else break;
-				}
-				stack.push(num.charAt(i));
+			while (!stack.isEmpty() && count < K) {
+				if (stack.peek() < num.charAt(i)) {
+					stack.pop();
+					count++;
+				} else
+					break;
 			}
+			stack.push(num.charAt(i));
 		}
 		
 		/* K개만큼 빼지 못했을 경우 
