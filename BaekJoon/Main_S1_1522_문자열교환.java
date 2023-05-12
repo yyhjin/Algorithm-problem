@@ -8,7 +8,6 @@ public class Main_S1_1522_문자열교환 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
 		
-		
 		int countA = 0;
 		for (int i = 0; i < str.length(); i++) {
 			if(str.charAt(i) == 'a') countA++;
