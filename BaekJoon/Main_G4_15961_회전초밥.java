@@ -33,7 +33,7 @@ public class Main_G4_15961_회전초밥 {
 		int max = 0;
 		int left = 0;
 		int right = k-1;
-		while(right<N+k-1 && left<=right) {
+		while(right < N+k-1) {
 			if(max == d) break;
 			
 			hash.put(arr[right], hash.getOrDefault(arr[right], 0)+1);
