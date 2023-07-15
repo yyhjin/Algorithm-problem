@@ -19,9 +19,7 @@ public class Main_S3_2659_십자카드문제 {
 		clock = findClock(num);
 		
 		int cnt = 1;
-		for (int i = 1111; i <= clock; i++) {
-			if(i == clock) break;
-			
+		for (int i = 1111; i < clock; i++) {			
 			String n = Integer.toString(i);
 			if(n.contains("0")) continue;
 			
@@ -31,7 +29,6 @@ public class Main_S3_2659_십자카드문제 {
 			}
 			
 			if(findClock(sort) == i) cnt++;
-
 		}
 		
 		System.out.println(cnt);
@@ -47,7 +44,6 @@ public class Main_S3_2659_십자카드문제 {
 			}
 			min = Math.min(min, Integer.parseInt(s));
 		}
-		
 		return min;
 	}
 	
