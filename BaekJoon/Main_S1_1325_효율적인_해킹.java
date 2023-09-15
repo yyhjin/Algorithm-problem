@@ -2,11 +2,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main_S1_1325_효율적인_해킹 {
 
-	static int N, M;
+	static int N, M, max;
 	static ArrayList<Integer>[] map;
 	static int[] dp;
 	static boolean[] v;
@@ -29,17 +32,12 @@ public class Main_S1_1325_효율적인_해킹 {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
-			map[a].add(b);
+			map[b].add(a);
 		}
 		
-		for (int i = 1; i <= N; i++) {			
+		for (int i = 1; i <= N; i++) {
 			v = new boolean[N+1];
-			dfs(i);
-		}
-		
-		int max = 0;
-		for(int num: dp) {
-			max = Math.max(max, num);
+			bfs(i);
 		}
 		
 		for(int i = 1; i <= N; i++) {
@@ -50,14 +48,23 @@ public class Main_S1_1325_효율적인_해킹 {
 		System.out.println(sb);
 	}
 
-	private static void dfs(int num) {		
-		v[num] = true;
-		
-		for(int next: map[num]) {
-			if(v[next]) continue;
-			dp[next]++;
-			dfs(next);
+	private static void bfs(int start) {
+		Queue<Integer> q = new LinkedList<>();
+		q.add(start);
+		v[start] = true;
+
+		int cnt = 0;
+		while(!q.isEmpty()) {
+			int cur = q.poll();
+			for(int next: map[cur]) {
+				if(v[next]) continue;
+				cnt++;
+				v[next] = true;
+				q.add(next);
+			}
 		}
+		max = Math.max(max, cnt);
+		dp[start] = cnt;
 	}
 
 }
