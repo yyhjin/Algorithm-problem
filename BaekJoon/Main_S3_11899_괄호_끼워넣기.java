@@ -11,8 +11,8 @@ public class Main_S3_11899_괄호_끼워넣기 {
 		Stack<Character> stack = new Stack<>();
 		String line = br.readLine();
 		
-		for (int i = line.length()-1; i >= 0; i--) {
-			if(!stack.isEmpty() && stack.peek() == ')' && line.charAt(i) == '(')
+		for (int i = 0; i < line.length(); i++) {
+			if(!stack.isEmpty() && stack.peek() == '(' && line.charAt(i) == ')')
 				stack.pop();
 			else stack.push(line.charAt(i));
 		}
