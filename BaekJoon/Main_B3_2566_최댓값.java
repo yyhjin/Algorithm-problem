@@ -10,8 +10,8 @@ public class Main_B3_2566_최댓값 {
 		StringTokenizer st;
 		
 		int max = 0;
-		int r = 0;
-		int c = 0;
+		int r = 1;
+		int c = 1;
 		
 		for (int i = 1; i <= 9; i++) {
 			st = new StringTokenizer(br.readLine());
